@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://use.typekit.net/tsg0zix.css">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <script src="https://kit.fontawesome.com/05144c839d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Gallery</title>
+</head>
+
+<body>
+    <style>
+        .rowG {
+            display: flex;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+            padding-left: 0px;
+        }
+        /* Create four equal columns that sits next to each other */
+        
+        .columnG {
+            -ms-flex: 25%;
+            /* IE10 */
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+        
+        .columnG img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+        /* Add your CSS for the lightbox here */
+        
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+        }
+        
+        .lightbox img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 80%;
+        }
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        
+        @media screen and (max-width: 800px) {
+            .columnG {
+                -ms-flex: 50%;
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 600px) {
+            .columnG {
+                -ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+    <header>
+        <a href="index.html"><img class="logo" src="tnrLogo.png" alt=""></a>
+        <div class="topnav" id="myTopnav">
+
+
+            <a href="index.html">Home</a>
+            <a href="sleep.html">Sleep</a>
+            <a href="dining.html">Dine</a>
+            <a href="wellness.html">Wellness</a>
+            <a href="contact.html">Contact</a>
+            <a href="gallery.html">Gallery</a>
+
+        </div>
+        <a href="javascript:void(0);" class="icon" id="menuIcon" onclick="toggleMenu()">
+            <i class="fa fa-plus" id="iconElement"></i>
+        </a>
+    </header>
+
+    <div class="faceImage-container">
+        <img src="p20.jpeg" alt="">
+        <div class="text-container ">
+            <h4>Welcome to Our Gallery <br> A Visual Symphony of Inspiration and Creativity</h4>
+            <a class="button btn " href="# " style="border-radius: 0;">BOOK</a>
+        </div>
+    </div>
+
+
+    <!-- gallery -->
+    <!-- Photo Grid -->
+    <div class="rowG" style="padding-top:10% ;">
+        <div class="columnG">
+            <img src="p1.jpeg" style="width:100%" class="enlargable" alt="Image 1">
+            <img src="p2.jpeg" style="width:100%" class="enlargable" alt="Image 2">
+            <img src="p3.jpeg" style="width:100%" class="enlargable" alt="Image 3">
+            <img src="p4.jpeg" style="width:100%" class="enlargable" alt="Image 4">
+            <img src="p5.jpeg" style="width:100%" class="enlargable" alt="Image 5">
+            <img src="p6.jpeg" style="width:100%" class="enlargable" alt="Image 6">
+            <img src="p7.jpeg" style="width:100%" class="enlargable" alt="Image 7">
+            <img src="p8.jpeg" style="width:100%" class="enlargable" alt="Image 8">
+            <img src="p16.jpeg" style="width:100%" class="enlargable" alt="Image 16">
+
+        </div>
+        <div class="columnG">
+            <img src="p9.jpeg" style="width:100%" class="enlargable" alt="Image 9">
+            <img src="p10.jpeg" style="width:100%" class="enlargable" alt="Image 10">
+            <img src="p11.jpeg" style="width:100%" class="enlargable" alt="Image 11">
+            <img src="p12.jpeg" style="width:100%" class="enlargable" alt="Image 12">
+            <img src="p13.jpeg" style="width:100%" class="enlargable" alt="Image 13">
+            <img src="p14.jpeg" style="width:100%" class="enlargable" alt="Image 14">
+            <img src="p15.jpeg" style="width:100%" class="enlargable" alt="Image 15">
+
+
+        </div>
+        <div class="columnG">
+            <img src="p17.jpeg" style="width:100%" class="enlargable" alt="Image 17">
+            <img src="p18.jpeg" style="width:100%" class="enlargable" alt="Image 18">
+            <img src="p19.jpeg" style="width:100%" class="enlargable" alt="Image 19">
+            <img src="p20.jpeg" style="width:100%" class="enlargable" alt="Image 20">
+            <img src="p21.jpeg" style="width:100%" class="enlargable" alt="Image 21">
+            <img src="p22.jpg" style="width:100%" class="enlargable" alt="Image 22">
+            <img src="p23.jpeg" style="width:100%" class="enlargable" alt="Image 24">
+            <img src="pic25.jpeg" style="width:100%" class="enlargable" alt="Image 23">
+        </div>
+        <div class="columnG">
+            <img src="p24.jpeg" style="width:100%" class="enlargable" alt="Image 25">
+            <img src="pic26.jpeg" style="width:100%" class="enlargable" alt="Image 26">
+            <img src="pic27.jpeg" style="width:100%" class="enlargable" alt="Image 27">
+            <img src="pic28.jpeg" style="width:100%" class="enlargable" alt="Image 28">
+            <img src="pic29.jpeg" style="width:100%" class="enlargable" alt="Image 29">
+            <img src="pic30.jpeg" style="width:100%" class="enlargable" alt="Image 30">
+            <img src="pic31.jpeg" style="width:100%" class="enlargable" alt="Image 31">
+            <img src="p18.jpeg" style="width:100%" class="enlargable" alt="Image 18">
+
+        </div>
+        <div class="lightbox">
+            <img id="enlarged-image" alt="Enlarged Image">
+        </div>
+    </div>
+    <script>
+        // JavaScript to handle image enlargement in a lightbox
+        const images = document.querySelectorAll(".enlargable");
+        const lightbox = document.querySelector(".lightbox");
+        const enlargedImage = document.getElementById("enlarged-image");
+
+        images.forEach((image) => {
+            image.addEventListener("click", function() {
+                enlargedImage.src = this.src;
+                lightbox.style.display = "block";
+            });
+        });
+
+        lightbox.addEventListener("click", function() {
+            lightbox.style.display = "none";
+        });
+    </script>
+
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-container">
+            <div class="row footer-row">
+                <div class="one-half column">
+                    <div class="footer-logo">
+                        <img src="logowhite_title.png" alt="">
+                    </div>
+
+                </div>
+                <div class="one-half column ">
+                    <div class="footer-text">
+                        <h6 class="caps">Tiger's Nest Resort</h6>
+                        <p> Satsam Chorten, Paro, Bhutan <br> Telephone: +975 1712 70 71 <br> E-Mail: tigernestresort@gmail.com </p>
+                    </div>
+
+                    <div class="footer-brands">
+                        <div class="one-half column ">
+                            <img src="yodselLogo.png" alt="">
+                        </div>
+                        <div class="one-half column ">
+                            <img src="pada2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="footer-brands">
+                        <div class="one-half column miri ">
+
+                        </div>
+                        <div class="one-half column miri ">
+                            <img src="miri.jpg" . alt="">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row footer-row spacer-lg">
+                <h6 class="caps" style="color: white;">info</h6>
+                <div class="one columns footer-links">
+
+                    <div>
+
+                        <ul>
+
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="sleep.html">Sleep</a>
+                            </li>
+                            <li>
+                                <a href="dining.html">Dine</a>
+                            </li>
+                            <li>
+                                <a href="wellness.html">Wellness</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="gallery.html">Gallery</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="one columns footer-links">
+                    <div>
+                        <ul>
+                            <li>
+                                <a href=" explore.html ">Explore</a>
+                            </li>
+                            <li>
+                                <a href="# ">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="# ">Terms</a>
+                            </li>
+                            <li>
+                                <a href="# ">Contribute</a>
+                            </li>
+                            <li>
+                                <a href="https://maps.app.goo.gl/3keErNkg7LFnfsTf7 ">Sitemap</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="one columns footer-links">
+                    <div>
+                        <ul class="social-icons">
+
+                            <li><a class="facebook" href="https://www.facebook.com/tigersnestresort/"><i class="fab fa-facebook"></i></a></li>
+                            <li><a class="instagram" href="https://www.instagram.com/tigersnest_bhutan/"><i class="fab fa-instagram"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+<script src="index.js "></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap "></script>
+
+</html>

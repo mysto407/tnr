@@ -1,0 +1,737 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-animation: anim-opacity-full 1000ms ease-out;
+    animation: anim-opacity-full 1000ms ease-out
+}
+
+@-webkit-keyframes anim-opacity-full {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes anim-opacity-full {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes anim-opacity-99 {
+    0% {
+        opacity: 0
+    }
+    99% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes anim-opacity-99 {
+    0% {
+        opacity: 0
+    }
+    99% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+header {
+    padding: 25px 64px 10px 68px;
+    background-color: white;
+}
+
+.logo {
+    width: 400px;
+    height: 100px;
+}
+
+.topnav {
+    overflow: hidden;
+    float: right;
+    padding-top: 25px;
+}
+
+p {
+    font-size: 16px;
+    font-family: "europa", sans-serif;
+}
+
+h6 {
+    font-family: "europa", sans-serif;
+    font-weight: 600;
+}
+
+h4 {
+    font-family: "europa", sans-serif;
+    font-weight: 300;
+    color: #818181;
+}
+
+h3 {
+    font-family: "europa", sans-serif;
+    font-weight: 800;
+    color: #818181;
+}
+
+h1 {
+    font-family: "europa", sans-serif;
+    font-weight: 900;
+    color: #818181;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.spacer {
+    margin-top: 3%;
+}
+
+.spacer-sml {
+    margin-top: 1%;
+}
+
+.spacer-lg {
+    margin-top: 6%;
+}
+
+.spacer-mobile {
+    padding-top: 0%;
+}
+
+.home-bk {
+    background: url(cottage2.jpeg)center left;
+    background-size: cover;
+}
+
+.sleep-bk {
+    background: url(sleep.jpg)top left;
+    background-size: cover;
+}
+
+.dine-bk {
+    background: url(dine2.jpeg)center bottom;
+    background-size: cover;
+}
+
+.wellness-bk {
+    background: url(bk.jpeg) right center;
+    background-size: cover;
+}
+
+.contact-bk {
+    background: url(p8.jpeg) center;
+    background-size: cover;
+}
+
+.explore-bk {
+    background: url(p3.jpeg) center;
+    background-size: cover;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+    color: black;
+    display: inline;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "europa", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    color: rgb(157, 151, 151);
+}
+
+
+/* Hide the link that should open and close the topnav on small screens */
+
+.icon {
+    color: #111;
+    display: none;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
+@media screen and (max-width: 600px) {
+    body {
+        margin-top: 18%;
+    }
+    header {
+        padding: 10px 30px 0px 15px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 5;
+        background-color: white;
+    }
+    .icon {
+        padding: 10px 02px;
+        float: right;
+        display: inline;
+    }
+    .topnav a {
+        display: none;
+    }
+    .logo {
+        width: 200px;
+        height: 50px;
+    }
+    .spacer {
+        margin-top: 10%;
+    }
+    .spacer-lg {
+        margin-top: 15%;
+    }
+    .spacer-mobile {
+        padding-top: 15%;
+    }
+}
+
+
+/* The "responsive" class is added to the topnav with JavaScript when 
+the user clicks on the icon. This class makes the topnav look good on small screens 
+(display the links vertically instead of horizontally) */
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        height: 100%;
+        /* 100% Full-height */
+        width: 0;
+        /* 0 width - change this with JavaScript */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Stay on top */
+        top: 0px;
+        left: 0;
+        background-color: rgb(17, 17, 17);
+        /* Black*/
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 60px;
+        /* Place content 60px from the top */
+        transition: 0.5s;
+        /* 0.5 second transition effect to slide in the sidenav */
+    }
+    .topnav.responsive a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .row {
+        margin: 20% 0;
+    }
+}
+
+
+/* First Image */
+
+.faceImage-container {
+    position: relative;
+    margin: auto;
+    width: 96%;
+    height: 60rem;
+    /* Set the desired height */
+    overflow: hidden;
+}
+
+.faceImage-container img {
+    margin: auto;
+    width: 1400px;
+    /* Make sure the image takes 100% of the container width */
+    height: auto;
+    /* Maintain the image's aspect ratio */
+    display: block;
+}
+
+.text-container {
+    position: absolute;
+    width: 90%;
+    top: 40%;
+    left: 4%;
+}
+
+.faceImage-container h4 {
+    color: white;
+    font-family: "europa", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    display: block;
+}
+
+.faceImage-container .btn {
+    font-family: "europa", sans-serif;
+    font-weight: 400;
+    color: white;
+    border-width: 2px;
+    border-color: white;
+}
+
+.faceImage-container .btn:hover {
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* After Face Image */
+
+.row {
+    padding: 4% 5%;
+}
+
+.event {
+    padding: 0%;
+}
+
+.event img {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    /* Set the desired height */
+    overflow: hidden;
+}
+
+.event h6 {
+    color: #818181;
+    font-family: "europa", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+@media screen and (max-width: 600px) {
+    .event {
+        padding-top: 10%;
+    }
+    .event .dine-img img {
+        margin: auto;
+        width: 100%;
+    }
+    .event .wellness-img {
+        height: 40rem;
+    }
+}
+
+
+/* page Link */
+
+.pageLink {
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.pl1 {
+    background: url(dine.jpg)center;
+    background-size: cover;
+}
+
+.pl2 {
+    background: url(balcony2.jpeg)center;
+    background-size: cover;
+}
+
+.pl3 {
+    background: url(hiking2-2.jpeg)center;
+    background-size: cover;
+}
+
+.pageLink h4 {
+    color: white;
+    position: absolute;
+    font-family: "europa", sans-serif;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+}
+
+.pageLink:hover .overlay {
+    display: block;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 600px) {
+    .pageLink {
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+}
+
+
+/* Custom Button */
+
+.custom-btn {
+    position: relative;
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+    border-radius: 0%;
+}
+
+.btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+.btn-5:hover {
+    color: #000000;
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn-5:before,
+.btn-5:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #000000;
+    box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+
+.btn-5:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btn-5:hover:before,
+.btn-5:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+
+/* Dine */
+
+.event .dine-img {
+    width: auto;
+    height: 20rem;
+    overflow: hidden;
+    margin-bottom: 6%;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dine-img img {
+    width: 80%;
+    margin: 0;
+}
+
+
+/* wellness  */
+
+.wellness-img {
+    width: auto;
+    height: 60rem;
+    overflow: hidden;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.wellness-img img {
+    width: 100%;
+    margin: 0;
+}
+
+.wellness-h5 {
+    font-family: "europa", sans-serif;
+    font-weight: 500;
+    color: #818181;
+}
+
+.b {
+    font-family: "europa", sans-serif;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea,
+input[type="submit"] {
+    border-radius: 0;
+}
+
+
+/* Destination row */
+
+.destination {
+    margin: 0;
+    padding: 0% 5%;
+}
+
+.destination h4 {
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+    .destination {
+        margin: 0;
+    }
+}
+
+.d1 {
+    background: url(https://images.unsplash.com/photo-1638245771029-9bdb1e3e7a01?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+
+.d2 {
+    background: url(https://images.unsplash.com/photo-1590319909173-05955b117587?auto=format&fit=crop&q=80&w=2770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+
+.d3 {
+    background: url(kyiichu.jpeg);
+    background-size: cover;
+}
+
+
+/* Footer */
+
+.footer-row {
+    padding: 3% 3% 0% 3%;
+}
+
+.footer-container {
+    position: relative;
+    margin: 2.5%;
+    background-color: #000000;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.footer-logo img {
+    position: relative;
+    width: 40%;
+    top: 2%;
+    left: 2%;
+}
+
+.footer-text {
+    color: white;
+    text-align: right;
+}
+
+.footer-text h6,
+.footer-links h6 {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.footer-text p {
+    color: #ffffffa4;
+}
+
+.footer-brands {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.footer-brands img {
+    width: 100%;
+    padding-top: 20%;
+}
+
+.miri {
+    text-align: right;
+}
+
+.footer-brands .miri img {
+    width: 60%;
+}
+
+.footer-links {
+    line-height: 90%;
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 3%;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin-right: 2%;
+}
+
+.footer-links li {
+    margin-bottom: 7px;
+}
+
+.footer-links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "europa", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    .footer-container {
+        text-align: center;
+    }
+    .footer-row {
+        margin: 10% 0%;
+    }
+    .footer-logo img {
+        width: 60%;
+        top: 0%;
+        left: 0%;
+    }
+    .footer-text {
+        padding-top: 10%;
+        color: white;
+        text-align: left;
+    }
+    .footer-text h6 {
+        color: #ffffff;
+        font-size: 15px;
+        margin: 0;
+    }
+    .footer-text p {
+        color: #ffffffa4;
+        font-size: 13px;
+    }
+    .footer-brands {
+        text-align: center;
+        display: inline-block;
+    }
+    .footer-brands img {
+        width: 80%;
+    }
+    .miri {
+        text-align: center;
+    }
+}
+
+.social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 4px
+}
+
+.social-icons a {
+    background-color: #000000;
+    color: #d5dbdf;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+    color: #fff;
+    background-color: #29aafe
+}
+
+.social-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px
+}
+
+.social-icons a.facebook:hover {
+    background-color: #3b5998
+}
+
+.social-icons a.instagram:hover {
+    background-color: #bf16ae
+}
+
+.social-icons a.linkedin:hover {
+    background-color: #007bb6
+}
+
+@media (max-width:767px) {
+    .social-icons li.title {
+        display: block;
+        margin-right: 0;
+        font-weight: 600
+    }
+}
